@@ -1,0 +1,298 @@
+{
+  "file:///Users/maruweb/Desktop/react8/marubatsu/src/App.jsx": [
+    {
+      "id": "30",
+      "text": "function Square({value, onclick}){\n  return (\n  <button\n  onClick={onclick}\n  className=\"h-20 w-20 rounded-xl bg-white text-4xl\n                 font-bold shadow ",
+      "color": "#00CC0055",
+      "comment": "code1",
+      "position": {
+        "start": 53,
+        "end": 215
+      }
+    },
+    {
+      "id": "34",
+      "text": "transition\n                 hover:-translate-y-1 hover:shadow-xl\"",
+      "color": "#1e293b",
+      "comment": "code10",
+      "position": {
+        "start": 215,
+        "end": 280
+      }
+    },
+    {
+      "id": "33",
+      "color": "#00CC0055",
+      "text": "\n  >\n{value}\n  </button>\n  )\n}",
+      "position": {
+        "start": 280,
+        "end": 310
+      }
+    },
+    {
+      "id": "29",
+      "color": "#00CC0055",
+      "text": "\n",
+      "position": {
+        "start": 310,
+        "end": 311
+      }
+    },
+    {
+      "id": "14",
+      "text": "\n",
+      "color": "#008080",
+      "comment": "code7",
+      "position": {
+        "start": 311,
+        "end": 312
+      }
+    },
+    {
+      "id": "32",
+      "text": "function Scoreboard({ scores, xIsNext }) {\n  return (\n    <div className=\"flex gap-4\">\n      {[\"○\", \"×\"].map((player) => {\n",
+      "color": "#008080",
+      "comment": "code7",
+      "position": {
+        "start": 312,
+        "end": 435
+      }
+    },
+    {
+      "id": "35",
+      "color": "#008080",
+      "text": "\n     return(\n        <div key={player}\n             className={`w-32 rounded-2xl bg-white p-4\n                        text-center shadow-lg ",
+      "position": {
+        "start": 489,
+        "end": 630
+      }
+    },
+    {
+      "id": "36",
+      "color": "#008080",
+      "text": "\n          <p className=\"text-sm text-gray-500\">{player}</p>\n          <p className=\"text-3xl font-bold\">{scores[player]}</p>\n        </div>\n     )\n      })}\n    </div>\n  );\n}",
+      "position": {
+        "start": 674,
+        "end": 874
+      }
+    },
+    {
+      "id": "6",
+      "text": "const LINES = [\n  [0, 1, 2], [3, 4, 5], [6, 7, 8],\n  [0, 3, 6], [1, 4, 7], [2, 5, 8],\n  [0, 4, 8], [2, 4, 6],\n];\n \nfunction calculateWinner(squares) {\n  for (const [a, b, c] of LINES) {\n    if (squares[a] &&\n        squares[a] === squares[b] &&\n        squares[a] === squares[c]) return squares[a];\n  }\n  return null;\n}",
+      "color": "#cc6600",
+      "comment": "code4",
+      "position": {
+        "start": 876,
+        "end": 1195
+      }
+    },
+    {
+      "id": "2",
+      "text": "const [squares, setSquares] = useState(Array(9).fill(null))",
+      "color": "#FFFF0088",
+      "comment": "code2",
+      "position": {
+        "start": 1230,
+        "end": 1289
+      }
+    },
+    {
+      "id": "4",
+      "text": "const [xIsNext, setXIsNext] = useState(true);",
+      "color": "#0000FF55",
+      "comment": "code3",
+      "position": {
+        "start": 1290,
+        "end": 1335
+      }
+    },
+    {
+      "id": "20",
+      "text": "const [scores , setScores] = useState({\"○\":0, \"×\":0})",
+      "color": "#c68a3a",
+      "comment": "code8",
+      "position": {
+        "start": 1336,
+        "end": 1389
+      }
+    },
+    {
+      "id": "16",
+      "text": "const winner = calculateWinner(squares)",
+      "color": "#C48b9f",
+      "comment": "code5",
+      "position": {
+        "start": 1391,
+        "end": 1430
+      }
+    },
+    {
+      "id": "9",
+      "text": "const isDraw = !winner && squares.every((v) => v !== null)",
+      "color": "#87ceeb",
+      "position": {
+        "start": 1431,
+        "end": 1489
+      }
+    },
+    {
+      "id": "10",
+      "text": "const isDraw = !winner && squares.every((v) => v !== null)",
+      "color": "#ff0000",
+      "comment": "code6",
+      "position": {
+        "start": 1431,
+        "end": 1489
+      }
+    },
+    {
+      "id": "17",
+      "text": "const status = winner\n    ? `${winner} の勝ち！`",
+      "color": "#c48b9f",
+      "comment": "code5",
+      "position": {
+        "start": 1490,
+        "end": 1534
+      }
+    },
+    {
+      "id": "11",
+      "text": "  : isDraw\n    ? \"引き分け\"",
+      "color": "#ff0000",
+      "comment": "code6",
+      "position": {
+        "start": 1537,
+        "end": 1560
+      }
+    },
+    {
+      "id": "18",
+      "text": ": `つぎは ${xIsNext ? \"○\" : \"×\"} の番`",
+      "color": "#c48b9f",
+      "comment": "code5",
+      "position": {
+        "start": 1565,
+        "end": 1598
+      }
+    },
+    {
+      "id": "5",
+      "text": "function handleClick(i) {\n    if (squares[i] ",
+      "color": "#0000FF55",
+      "comment": "code3",
+      "position": {
+        "start": 1602,
+        "end": 1647
+      }
+    },
+    {
+      "id": "15",
+      "color": "#0000FF55",
+      "text": ") return;\n    const next = [...squares];\n    next[i] = xIsNext ? \"○\" : \"×\";\n    setSquares(next);\n    setXIsNext(!xIsNext);\n\n    const w = calculateWinner(next);\n    if (w) setScores((s) => ({...s, [w]: s[w] + 1}))\n  }",
+      "position": {
+        "start": 1656,
+        "end": 1874
+      }
+    },
+    {
+      "id": "19",
+      "text": "    const w = calculateWinner(next);\n    if (w) setScores((s) => ({...s, [w]: s[w] + 1}))",
+      "color": "#c68a3a",
+      "comment": "code8",
+      "position": {
+        "start": 1781,
+        "end": 1870
+      }
+    },
+    {
+      "id": "23",
+      "text": "function reset(){\n    setSquares(Array(9).fill(null))\n    setXIsNext(true)\n  }",
+      "color": "#ff0000",
+      "comment": "code6",
+      "position": {
+        "start": 1878,
+        "end": 1956
+      }
+    },
+    {
+      "id": "27",
+      "text": " <div className=\"flex min-h-screen flex-col items-center\n                    justify-center gap-6 bg-orange-50\">\n      <h1 className=\"text-3xl font-bold text-gray-800\">\n        ○×ゲーム\n      </h1>",
+      "color": "#8f00ff",
+      "comment": "code9",
+      "position": {
+        "start": 1978,
+        "end": 2172
+      }
+    },
+    {
+      "id": "22",
+      "text": " <Scoreboard scores={scores} xIsNext={xIsNext}/>",
+      "color": "#c68a3a",
+      "comment": "code8",
+      "position": {
+        "start": 2177,
+        "end": 2225
+      }
+    },
+    {
+      "id": "25",
+      "text": "<p className='text-xl font-bold'>{status}</p>",
+      "color": "#c48b9f",
+      "comment": "code5",
+      "position": {
+        "start": 2230,
+        "end": 2275
+      }
+    },
+    {
+      "id": "3",
+      "text": "<div className='grid grid-cols-3 gap-2'>\n      {squares.map((value, i) => (\n        <Square\n        key={i}\n        value={value}\n        onclick={() => handleClick(i)}\n        />\n  ))}\n    </div>",
+      "color": "#FFFF0088",
+      "comment": "code2",
+      "position": {
+        "start": 2280,
+        "end": 2526
+      }
+    },
+    {
+      "id": "26",
+      "text": "grid grid-cols-3 gap-2 roudnded-2xl\n    bg-orange-200 p-3 shadow-inner",
+      "color": "#8f00ff",
+      "comment": "code9",
+      "position": {
+        "start": 2296,
+        "end": 2366
+      }
+    },
+    {
+      "id": "24",
+      "text": "<button\n    onClick={reset}\n    className='rounded-full bg-orange-500 px-6 py-2\n                   text-white'\n    >\n      もう一度あそぶ\n    </button>",
+      "color": "#ff0000",
+      "comment": "code6",
+      "position": {
+        "start": 2531,
+        "end": 2675
+      }
+    },
+    {
+      "id": "37",
+      "text": " const isTurn = player === (xIsNext ? \"○\" : \"×\"); ",
+      "color": "#1e3a5f",
+      "comment": "code10",
+      "position": {
+        "start": 439,
+        "end": 489
+      }
+    },
+    {
+      "id": "38",
+      "text": "${isTurn ? \"ring-4 ring-orange-400\" : \"\"}`}>",
+      "color": "#1e3a5f",
+      "comment": "code10",
+      "position": {
+        "start": 630,
+        "end": 674
+      }
+    }
+  ]
+}
